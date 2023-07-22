@@ -83,34 +83,9 @@ input {
   | Base styles
   |============================
 */
+
 .main {
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-.section {
-}
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: var(--indent-vertical);
-  column-gap: var(--indent-horizontal);
-}
-.card-set-items {
-  flex-basis: calc(
-    (100%-var(--indent-vertical) * (var(--items)-1)) / var(--items)
-  );
-}
-
 /* Base stiles for small divices */
 
 .container {
@@ -138,6 +113,38 @@ input {
     padding-right: 15px;
   }
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.section {
+  padding: 96px 0;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 120px 0;
+  }
+}
+/* .card-set { 
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--indent-vertical);
+  column-gap: var(--indent-horizontal);
+ } */
+/* .card-set-items { 
+  flex-basis: calc(
+    (100%-var(--indent-vertical) * (var(--items)-1)) / var(--items)
+  );
+}*/
 
 .title {
   font-weight: 700;
@@ -318,23 +325,45 @@ input {
 /* About-Us-section */
 
 .about-us {
-  padding: 120px 0;
+  /* padding: 120px 0; */
 }
-.about-us-list {
+/* .about-us-list { 
   display: flex;
   align-items: center;
   gap: 24px;
+ } */
+@media only screen and (min-width: 768px) {
+  .about-us-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
-.about-us-subtitle {
-  margin-bottom: 8px;
+
+@media screen and (min-width: 768px) {
+  .about-us-item {
+    flex-basis: calc((100%-24px) / 2);
+  }
 }
-.about-us-text {
+
+/* .about-us-subtitle { 
+  margin-bottom: 8px; 
+}*/
+/* .about-us-item { 
+ } */
+
+@media screen and (max-width: 767px) {
+  .about-us-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+}
+
+/* .about-us-text { 
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
-}
-.about-us-icon-box {
+} */
+/* .about-us-icon-box { 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,9 +372,9 @@ input {
   border-radius: 4px;
   background-color: #f4f4fd;
   margin-bottom: 8px;
-}
-.about-us-icon {
-}
+ } */
+/* .about-us-icon { 
+ } */
 
 /* Projects-section */
 
